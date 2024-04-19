@@ -1,0 +1,13 @@
+
+
+  <div class="house-container">
+    <div class="house">
+      <div class="roof"></div>
+      <div class="walls"></div>
+      <div class="door"></div>
+      <div class="window"></div>
+    </div>
+    <div class="sun-moon" [ngClass]="{'sun': ldrValue > 500, 'moon': ldrValue <= 500}">
+      <div class="rays"></div>
+    </div>
+  </div>

@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Casa
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="sky" [ngClass]="{'night-sky': ldrValue <= 890}">
+    <div class="sun-moon" [ngClass]="{'sun': ldrValue > 890, 'moon': ldrValue <= 890}">
+      <div class="ray"></div>
+    </div>
+  </div>
+</ion-content>

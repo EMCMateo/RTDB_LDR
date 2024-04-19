@@ -1,0 +1,101 @@
+.house-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+  }
+  
+  .house {
+    position: relative;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .roof {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+    border-bottom: 75px solid #8B4513; /* Brown */
+  }
+  
+  .walls {
+    width: 100%;
+    height: 75px;
+    background-color: #FFD700; /* Yellow */
+  }
+  
+  .door {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 60px;
+    background-color: #8B4513; /* Brown */
+  }
+  
+  .window {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: #ADD8E6; /* Light Blue */
+    border: 3px solid #8B4513; /* Brown */
+    border-radius: 50%;
+  }
+  
+  .sun-moon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+  }
+  
+  .sun {
+    background-color: #FFD700; /* Yellow */
+  }
+  
+  .sun .rays {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-top: 35px solid transparent;
+    border-right: 50px solid #FFD700; /* Yellow */
+    border-bottom: 35px solid transparent;
+    border-left: 50px solid #FFD700; /* Yellow */
+    animation: rotateSun 5s linear infinite;
+  }
+  
+  .moon {
+    background-color: #708090; /* Slate Gray */
+  }
+  
+  .moon:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #f2f2f2; /* Light Gray */
+  }
+  
+  @keyframes rotateSun {
+    100% {
+      transform: rotate(360deg);
+    }
+  }

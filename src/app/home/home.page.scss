@@ -1,0 +1,33 @@
+.sky {
+  height: 100vh;
+  background-color: #87CEEB; 
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.5s ease; 
+}
+
+.night-sky {
+  background-color: #000080; 
+}
+
+.sun-moon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: 0 0 50px transparent; 
+}
+
+.sun-moon.sun {
+  background-color: #FFD700; /* Yellow */
+  box-shadow: 0 0 50px #FFD700, 0 0 100px #FFD700, 0 0 150px #FFD700;
+}
+
+.sun-moon.moon {
+  background-color: #f2f2f2; /* Light Gray */
+  box-shadow: 0 0 50px #f2f2f2, 0 0 100px #f2f2f2, 0 0 150px #f2f2f2;
+}

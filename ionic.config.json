@@ -1,0 +1,7 @@
+{
+  "name": "rtdbldr",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
