@@ -13,7 +13,9 @@ export class HomePage implements OnInit {
 
   constructor(private database: Database) {}
 
-  ngOnInit() {
+  async ngOnInit() {
+    await LocalNotifications.requestPermissions();//solicitar permisos de la app
+    
     const route = ref(this.database, 'ldrValue');
     object(route).subscribe(attributes => {
       this.ldrValue = attributes.snapshot.val(); 
@@ -29,6 +31,7 @@ export class HomePage implements OnInit {
   }
 
   async scheduleNotification(title: string, body: string) {
+    
     const notification = {
       title: title,
       body: body,
